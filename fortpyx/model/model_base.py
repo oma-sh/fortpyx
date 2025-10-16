@@ -67,7 +67,7 @@ class ModelBase(BaseModel):
             if ModelBase.__is_optional(types):
                 for current_type in types:
                     if ModelBase.__is_not_allowed_as_empty_string(current_type):
-                        return None
+                        return v or None
 
         return v
 
