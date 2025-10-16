@@ -3946,12 +3946,12 @@ class FortnoxInvoicePayment(ModelBase):
     invoice_due_date: Annotated[Optional[date], Field(None, alias="InvoiceDueDate")]
     invoice_number: Annotated[int, Field(alias="InvoiceNumber")]
     invoice_ocr: Annotated[Optional[str], Field(None, alias="InvoiceOCR")]
-    invoice_total: Annotated[Optional[str], Field(None, alias="InvoiceTotal")]
+    invoice_total: Annotated[Optional[float], Field(None, alias="InvoiceTotal")]
     mode_of_payment: Annotated[Optional[str], Field(None, alias="ModeOfPayment")]
     mode_of_payment_account: Annotated[
         Optional[int], Field(None, alias="ModeOfPaymentAccount", ge=1000, le=9999)
     ]
-    number: Annotated[Optional[str], Field(None, alias="Number")]
+    number: Annotated[Optional[int], Field(None, alias="Number")]
     payment_date: Annotated[Optional[date], Field(None, alias="PaymentDate")]
     source: Annotated[Optional[str], Field(None, alias="Source")]
     voucher_number: Annotated[Optional[int], Field(None, alias="VoucherNumber")]
