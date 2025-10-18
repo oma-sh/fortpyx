@@ -4774,7 +4774,7 @@ class Fortpyx:
                     offset=offset,
                 )
 
-                return response.json()
+                return response.content
 
             @auto_consume_pages
             def print_an_invoice(
@@ -4789,7 +4789,7 @@ class Fortpyx:
                     offset=offset,
                 )
 
-                return response.json()
+                return response.content
 
             @auto_consume_pages
             def print_an_invoice_as_reminder(
@@ -4804,7 +4804,7 @@ class Fortpyx:
                     offset=offset,
                 )
 
-                return response.json()
+                return response.content
 
             def set_an_invoice_as_done(
                 self, document_number: str
